@@ -8,7 +8,7 @@ While there are multiple resources to look up sunrise and sunset times for a loc
 The goal of the Chasing Sunlight site is to display first light, last light, and other marked times in a bold, graphical way that makes it easy to tell at a glance how much sunlight is left (or how long until it's back).
 
 ## Wireframes
-<img src='/Users/ambretate/SEB/projects/project_1/resources/images/IMG_4596.png'>
+<img src='/https://github.com/ambretate/Project_1/blob/main/resources/images/IMG_4596.png'>
 
 ## APIs
 - [Sunrise and sunset times API](https://sunrise-sunset.org/api) by Sunrise-Sunset
