@@ -9,6 +9,7 @@ const handleSubmit = function (event) {
 
   const sunURL = "https://api.sunrise-sunset.org/json";
   const latLongURL = "https://api.api-ninjas.com/v1/geocoding?city=";
+  //const timeZoneURL = "https://api.api-ninjas.com/v1/timezone?city=";
   const apiKey = "ifSDKbn6+C408rU06ll5GA==tI2dBZ1n24SpzCOZ";
 
   fetch(`${latLongURL}${city}`, {
@@ -25,13 +26,12 @@ const handleSubmit = function (event) {
 
       const lat = res[0].latitude;
       const long = res[0].longitude;
-      fetch(`${sunURL}?lat=${lat}&lng=${long}`)
+
+      fetch(`${sunURL}?lat=${lat}&lng=${long}&tzid=America/New_York`)
         .then((response) => {
           return response.json();
         })
         .then((response) => {
-          console.log(response);
-
           const astroTwilightB = document.querySelector("#astroTwilightB");
           astroTwilightB.innerHTML =
             response.results.astronomical_twilight_begin;
@@ -86,3 +86,5 @@ form.addEventListener("submit", handleSubmit);
 //Function for definitions on hover
 
 //Time slider - function???
+
+//&tzid=${timeZone}
