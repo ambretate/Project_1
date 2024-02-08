@@ -10,10 +10,13 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="userInputs">
-        <input class="city" placeholder="Enter city as city or city, state">
-        <input class="date">
-    </nav>
+    <form id="form">
+        <nav class="userInputs">
+            <input class="city" type="text" placeholder="Enter city as city or city, state">
+            <input type="submit" value="Submit">
+            <input class="date" type="date" placeholder="Enter date (if not today)">
+         </nav>
+    </form>
     <main>
         <div class="timeColor">
             <div class="hour"></div>

@@ -1,5 +1,7 @@
 html {
-    box-sizing: border-box
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
   }
   
   *, *::before, *::after { 
@@ -22,6 +24,8 @@ html {
     grid-area: nav;
     display: flex;
     justify-content: flex-end;
+    font-size: small;
+    font-weight: 300;
 }
 
 .date {
@@ -30,8 +34,6 @@ html {
 
 .timeColor {
     grid-area: hour, minutes, amPm;
-    font-family: "Manrope", sans-serif;
-    font-optical-sizing: auto;
     font-size: xx-large;
     font-weight: 600;
     font-style: normal;
