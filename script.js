@@ -29,3 +29,17 @@ fetch(`${latLongURL}${city}`, {headers: {
     .catch((err) => {
         console.log("Uh-oh! There has been an error!", err);
     })
+
+//Form event handler for passing city into lat/long fetch, setting display city
+
+//Chain lat/long fetch into sun fetch
+
+//Function to set hour, minutes, amPm
+
+//Function to set div content in list
+
+//Function for countdown
+
+//Function for definitions on hover
+
+//Time slider - function???

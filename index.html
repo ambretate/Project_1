@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chasing Sunlight</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <script src="script.js" defer></script>
 </head>
 <body>
     <nav class="userInputs">
-        <input class="city">
+        <input class="city" placeholder="Enter city as city or city, state">
         <input class="date">
     </nav>
     <main>
@@ -22,39 +24,48 @@
             <div class="displayCity"></div>
             <div class="astroTwilightB">
                 <div class="actualTime"></div>
-                <div class="namedTime">Astronomical Twilight Begins</div>
+                <button class="namedTime">Astronomical Twilight Begins</button>
+                <p class="displayOnHover">Astronomical twilight occurs when the sun is between 12 degrees and 18 degrees below the horizon. Astronomical dawn occurs when the center of the sun is 18 degrees below the horizon.</p>
             </div>
             <div class="nautiTwilightB">
                 <div class="actualTime"></div>
-                <div class="namedTime">Nautical Twilight Begins</div>
+                <button class="namedTime">Nautical Twilight Begins</button>
+                <p class="displayOnHover">Nautical twilight occurs when the sun is between 6 degrees and 12 degrees below the horizon. Nautical dawn occurs when the center of the sun is 12 degrees below the horizon.</p>
             </div>
             <div class="civilTwilightB">
                 <div class="actualTime"></div>
-                <div class="namedTime">Civil Twilight Begins</div>
+                <button class="namedTime">Civil Twilight Begins</button>
+                <p class="displayOnHover">Civil twilight occurs when the sun is less than 6 degrees below the horizon. It starts at civil dawn when the center of the sun is 6 degrees below the horizon and ends at sunrise.</p>
             </div>
             <div class="sunrise">
                 <div class="actualTime"></div>
-                <div class="namedTime">Sunrise</div>
+                <button class="namedTime">Sunrise</button>
+                <p class="displayOnHover">Sunrise occurs when the upper edge of the solar disk becomes visible above the horizon.</p>
             </div>
             <div class="solarNoon">
                 <div class="actualTime"></div>
-                <div class="namedTime">Solar Noon</div>
+                <button class="namedTime">Solar Noon</button>
+                <p class="displayOnHover">Solar noon is the moment when the sun passes a location's meridian and reaches its highest position in the sky.</p>
             </div>
             <div class="sunset">
                 <div class="actualTime"></div>
-                <div class="namedTime">Sunset</div>
+                <button class="namedTime">Sunset</button>
+                <p class="displayOnHover">Sunset occurs when the upper edge of the solar disk disappears below the horizon.</p>
             </div>
             <div class="civilTwilightE">
                 <div class="actualTime"></div>
-                <div class="namedTime">Civil Twilight Ends</div>
+                <button class="namedTime">Civil Twilight Ends</button>
+                <p class="displayOnHover">Civil twilight occurs when the sun is less than 6 degrees below the horizon. It starts at sunset and ends at civil dusk when the center of the sun is 6 degrees below the horizon.</p>
             </div>
             <div class="nautiTwilightE">
                 <div class="actualTime"></div>
-                <div class="namedTime">Nautical Twilight Ends</div>
+                <button class="namedTime">Nautical Twilight Ends</button>
+                <p class="displayOnHover">Nautical twilight occurs when the sun is between 6 degrees and 12 degrees below the horizon. Nautical dusk occurs when the center of the sun is 12 degrees below the horizon.</p>
             </div>
             <div class="astroTwilightE">
                 <div class="actualTime"></div>
-                <div class="namedTime">Astronomical Twilight Ends</div>
+                <button class="namedTime">Astronomical Twilight Ends</button>
+                <p class="displayOnHover">Astronomical twilight occurs when the sun is between 12 degrees and 18 degrees below the horizon. Astronomical dusk occurs when the center of the sun is 18 degrees below the horizon.</p>
             </div>
         </div>
     </main>

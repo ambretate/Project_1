@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box
+  }
+  
+  *, *::before, *::after { 
+    box-sizing: inherit;
+  }
+
+.body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 40% 30% 30%;
+    grid-template-rows: 10% 30% 40% 20%;
+    grid-template-areas:
+        "hour minutes nav"
+        "hour minutes list"
+        "hour amPm list"
+        "countdown countdown list";
+}
+
+.userInputs {
+    grid-area: nav;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.date {
+    display: none;
+}
+
+.timeColor {
+    grid-area: hour, minutes, amPm;
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-size: xx-large;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hour {
+    grid-area: hour;
+}
+
+.minutes {
+    grid-area: minutes;
+}
+
+.amPm {
+    grid-area: amPm;
+}
+
+.countdown {
+    grid-area: countdown ;
+}
+
+.list {
+    grid-area: list;
+}
+
+.displayCity {
+
+}
+
+.actualTime {
+
+}
+
+.namedTime {
+
+}
+
+.namedTime:hover + .displayOnHover {
+    display: block;
+}
+
+.displayOnHover {
+    display: none;
+}
