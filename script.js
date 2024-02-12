@@ -71,6 +71,10 @@ const handleSubmit = function (event) {
 
           let currentTime = new Date().getTime();
         let diff = response.results.civil_twilight_end - currentTime;
+
+        console.log(currentTime);
+        console.log(diff);
+
         let countdown = document.querySelector(".countdown");
         let timeColor = document.querySelector(".timeColor");
 
@@ -78,7 +82,7 @@ const handleSubmit = function (event) {
             countdown.innerHTML = `${diff} until last light`;
         }
         else {
-         countdown.innerHTML = `Last light has passed for today`;
+         countdown.innerHTML = `Last light for today`;
         }
 
         if (currentTime < response.results.civil_twilight_begin) {
