@@ -59,7 +59,44 @@ const handleSubmit = function (event) {
 
           const astroTwilightE = document.querySelector("#astroTwilightE");
           astroTwilightE.innerHTML = response.results.astronomical_twilight_end;
-        })
+
+          const hour = document.querySelector(".hour");
+          hour.innerHTML = response.results.civil_twilight_end.slice(0,2);
+
+          const minutes = document.querySelector(".minutes");
+          minutes.innerHTML = response.results.civil_twilight_end.slice(2,4);
+
+          const amPm = document.querySelector(".amPm");
+          amPm.innerHTML = response.results.civil_twilight_end.slice(8,10);
+
+          let currentTime = new Date().getTime();
+        let diff = response.results.civil_twilight_end - currentTime;
+        let countdown = document.querySelector(".countdown");
+        let timeColor = document.querySelector(".timeColor");
+
+        if (diff > 0) {
+            countdown.innerHTML = `${diff} until last light`;
+        }
+        else {
+         countdown.innerHTML = `Last light has passed for today`;
+        }
+
+        if (currentTime < response.results.civil_twilight_begin) {
+            timeColor.classList.add("night");
+        }
+        else if (currentTime < response.results.sunrise) {
+            timeColor.classList.add("dawn");
+        }
+        else if (currentTime < response.results.sunset) {
+            timeColor.classList.add("day")
+        }
+        else if (currentTime < response.results.civil_twilight_end) {
+            timeColor.classList.add("dusk");
+        }
+        else {
+            timeColor.classList.add("night");
+        }
+    })
 
         .catch((err) => {
           console.log("Uh-oh! There has been an error!", err);
@@ -72,19 +109,15 @@ const handleSubmit = function (event) {
 
 form.addEventListener("submit", handleSubmit);
 
-//function displayList(times) {
-//  console.log(times);
+/*let lastLight = () => {
+    let currentTime = new Date().getTime();
+    let diff = response.results.civil_twilight_end - currentTime;
+    let countdown = document.querySelector(".countdown");
 
-//Form event handler for passing city into lat/long fetch, setting display city
-
-//Function to set hour, minutes, amPm
-
-//Function to set div content in list
-
-//Function for countdown
-
-//Function for definitions on hover
-
-//Time slider - function???
-
-//&tzid=${timeZone}
+    if (diff > 0) {
+        countdown.innerHTML = `${diff} until last light`
+    }
+    else {
+        countdown.innerHTML = `Last light has passed for today`
+    }
+} */

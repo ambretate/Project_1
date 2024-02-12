@@ -115,22 +115,22 @@ article {
     display: none;
 }
 
-.timeColor, .active {
+.dawn {
     background: rgb(238,196,196);
 background: linear-gradient(0deg, rgba(238,196,196,1) 0%, rgba(186,194,218,1) 50%, rgba(126,180,215,1) 100%);
 }
 
-.timeColor, .day {
+.day {
     background: rgb(253,254,247);
 background: radial-gradient(circle, rgba(253,254,247,1) 0%, rgba(148,187,233,1) 100%);
 }
 
-.timeColor, .dusk {
+.dusk {
     background: rgb(237,172,114);
 background: linear-gradient(0deg, rgba(237,172,114,1) 0%, rgba(176,118,157,0.6685267857142857) 61%, rgba(88,72,120,1) 100%);
 }
 
-.timeColor, .night {
+.night {
     color: rgb(238, 238, 232);
     background: rgb(39,54,86);
 background: radial-gradient(circle, rgba(39,54,86,0.7917760854341737) 0%, rgba(3,35,69,1) 100%);
