@@ -92,6 +92,8 @@ article {
 .displayCity {
     font-size: 1.5rem;
     font-weight: 600;
+    padding-left: 15px;
+    margin-top: 5px;
 }
 
 .actualTime {
@@ -132,4 +134,54 @@ background: linear-gradient(0deg, rgba(237,172,114,1) 0%, rgba(176,118,157,0.668
     color: rgb(238, 238, 232);
     background: rgb(39,54,86);
 background: radial-gradient(circle, rgba(39,54,86,0.7917760854341737) 0%, rgba(3,35,69,1) 100%);
+}
+
+@media (max-width: 629px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hour {
+        padding-left: 10%;
+    }
+
+    .minutes {
+        margin-top: 10%;
+    }
+
+    .countdown {
+        margin-top: -5%;
+    }
+}
+
+@media (min-width: 630px) and (max-width: 980px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hour {
+        font-size: 20rem;
+        text-align: right;
+    }
+    
+    .minutes {
+        font-size: 9rem;
+        padding-top: 16%;
+    
+    }
+    
+    .amPm {
+        font-size: 7rem;
+        margin-top: -5%;
+    }
+    
+    .countdown {
+        margin-top: -8%;
+    }
+
+    .list {
+        columns: 2
+    }
 }
